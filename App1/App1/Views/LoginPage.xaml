@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.LoginPage"
+             Background="#FFFFFF">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout x:Name="LoginLayout">
+                <Image Source="Vector6.png"     
+                   WidthRequest="53" 
+                   HeightRequest="54"
+                   AbsoluteLayout.LayoutBounds="135, 39"/>
+
+                <Image Source="Vector3.png"     
+                   WidthRequest="134" 
+                   HeightRequest="149"
+                   AbsoluteLayout.LayoutBounds="154, 40"/>
+
+                <Image Source="Vector2.png"     
+                   WidthRequest="131" 
+                   HeightRequest="161"
+                   AbsoluteLayout.LayoutBounds="150, 48"/>
+
+                <Image Source="Vector.png"     
+                   WidthRequest="134" 
+                   HeightRequest="149"
+                   AbsoluteLayout.LayoutBounds="139, 67"/>
+
+                <Image Source="Vector5.png"     
+                   WidthRequest="27" 
+                   HeightRequest="37"
+                   AbsoluteLayout.LayoutBounds="135, 65"/>
+
+                <Image Source="Vector1.png"     
+                   WidthRequest="58" 
+                   HeightRequest="28"
+                   AbsoluteLayout.LayoutBounds="186, 101"/>
+
+                <Image Source="Vector4.png"     
+                   WidthRequest="27" 
+                   HeightRequest="170"
+                   AbsoluteLayout.LayoutBounds="135, 60"/>
+
+                <Label Text="Добрый день!"
+                   FontSize="24" 
+                   TextColor="#282828" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="115, 250"/>
+                <Label Text="Введите свою почту и пароль, чтобы войти" 
+                   FontSize="14" 
+                   FontFamily="Roboto" 
+                   TextColor="#959595" 
+                   AbsoluteLayout.LayoutBounds="55, 300"/>
+
+                <Entry x:Name="UserLogin" 
+                   AbsoluteLayout.LayoutBounds="90, 355, 270, 60" 
+                   Placeholder="maria.volkova@gmail.com"
+                   Keyboard="Email"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="DimGray"
+                Focused="UserLogin_Focused"
+                   Unfocused ="UserLogin_Unfocused">
+                </Entry>
+
+                <Image x:Name="UserImage"
+                   Source="mail.png" 
+                   WidthRequest="25" 
+                   HeightRequest="25"
+                   AbsoluteLayout.LayoutBounds="54, 372"/>
+                <Rectangle x:Name="UserRectangle"  
+                    Stroke="DimGray"
+                    StrokeThickness="2"          
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 360" />
+
+                <Entry x:Name="Password" 
+                   AbsoluteLayout.LayoutBounds="90, 445, 270, 60" 
+                   Placeholder="Password"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="DimGray"
+                   Focused="Password_Focused"
+                   Unfocused="Password_Unfocused">
+                </Entry>
+
+                <Image x:Name="PasswordImage"
+                   Source="lock.png" 
+                   WidthRequest="25" 
+                   HeightRequest="25"
+                   AbsoluteLayout.LayoutBounds="54, 462"/>
+                <Rectangle x:Name="PasswordRectangle"  
+                    Stroke="DimGray"
+                    StrokeThickness="2"          
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 450" />
+
+                <Label Text="Забыли пароль?" 
+                   FontSize="14"
+                   FontFamily="Roboto" 
+                   TextColor="#959595"
+                   AbsoluteLayout.LayoutBounds="265, 520"/>
+
+                <Button
+                VerticalOptions="Center"
+                Text="Создать"
+                TextColor="White"
+                BackgroundColor="#FA6E09"
+                BorderWidth = "1.5"
+                CornerRadius="50"
+                FontSize="14"
+                AbsoluteLayout.LayoutBounds="110, 560, 180, 50"
+                Clicked="Button_Clicked">
+                </Button>
+
+                <Label AbsoluteLayout.LayoutBounds="85, 635">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Нет аккаунта?" FontSize="14" TextColor="#959595"/>
+                            <Span Text="   Зарегистрируйтесь" FontSize="14" TextColor="#FA6E09"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+
+            </AbsoluteLayout>
+            <!--<StackLayout Padding="40" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" >
+            <Image Source="login_book.png" WidthRequest="160" HeightRequest="160"></Image>
+            <Label Text="Добрый день!" Padding="5" FontSize="24" TextColor="#282828" FontFamily="Roboto" FontAttributes="Bold"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Введите свою почту и пароль, чтобы войти" Padding="10" FontSize="14" FontFamily="Roboto" TextColor="#959595" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="UserLogin" Keyboard="Email" Placeholder="Username" TextColor="#FA6E09" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="UserPassword" Placeholder="Password" IsPassword="True" TextColor="#FA6E09" PlaceholderColor="Gray"></Entry>
+            <Label Text="Забыли пароль?" FontSize="14" Padding="10" FontFamily="Roboto" TextColor="#959595" VerticalTextAlignment="End" HorizontalOptions="End"/>
+            <Button
+                VerticalOptions="Center"
+                Text="Войти"
+                TextColor="White"
+                BackgroundColor="#FA6E09"
+                BorderWidth = "1.5"
+                CornerRadius="50"
+                FontSize="14"
+                WidthRequest="180"
+                HeightRequest="50"
+                Clicked="Button_Clicked">
+
+            </Button>
+
+
+            <Label HorizontalOptions="Center" Padding="15">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Нет аккаунта?" FontSize="14" TextColor="#959595"/>
+                        <Span Text="   Зарегистрироваться" FontSize="14" TextColor="#FA6E09"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            -->
+            <!--<Label Padding = "10" Text="Нет аккаунта?" FontSize="14" TextColor="#959595" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Зарегистрироваться" FontSize="14" TextColor="#FA6E09" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>-->
+            <!--
+
+
+        </StackLayout>-->
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

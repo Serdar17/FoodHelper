@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.TipsPage"
+             Background="#E5E5E5">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="ImageButton">
+                <Setter Property="BorderWidth" Value="1.5"/>
+                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="WidthRequest" Value="350"/>
+                <Setter Property="HeightRequest" Value="100"/>
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+
+                <Image Source="tips_head_icon" 
+                   WidthRequest="410" 
+                   HeightRequest="180"
+                   AbsoluteLayout.LayoutBounds="0, -60"/>
+
+                <ImageButton
+                    Style="{StaticResource buttonStyle}"
+                    BackgroundColor="#FF8C04"
+                    AbsoluteLayout.LayoutBounds="35, 170"/>
+                <ImageButton
+                    Source="carrot_icon"
+                    WidthRequest="35"
+                    HeightRequest="35"
+                    BackgroundColor="#FF8C04"
+                    AbsoluteLayout.LayoutBounds="70, 202"/>
+                <Label Text="Здоровое питание"  
+                   Style="{StaticResource labelStyle}"
+                   AbsoluteLayout.LayoutBounds="120, 205"/>
+
+                <ImageButton
+                    Style="{StaticResource buttonStyle}"
+                    BackgroundColor="#FFA115"
+                    AbsoluteLayout.LayoutBounds="35, 320"/>
+                <ImageButton
+                    Source="white_watch_icon"
+                    WidthRequest="35"
+                    HeightRequest="35"
+                    BackgroundColor="#FFA115"
+                    AbsoluteLayout.LayoutBounds="70, 350"/>
+                <Label Text="Сон и отдых"  
+                   Style="{StaticResource labelStyle}"
+                   AbsoluteLayout.LayoutBounds="145, 355"/>
+
+                <ImageButton
+                    Style="{StaticResource buttonStyle}"
+                    BackgroundColor="#FFB11A"
+                    AbsoluteLayout.LayoutBounds="35, 470"/>
+                <ImageButton
+                    Source="barbell_icon"
+                    WidthRequest="35"
+                    HeightRequest="35"
+                    BackgroundColor="#FFB11A"
+                    AbsoluteLayout.LayoutBounds="70, 502"/>
+                <Label Text="Физическая форма"  
+                   Style="{StaticResource labelStyle}"
+                   AbsoluteLayout.LayoutBounds="130, 505"/>
+
+                <ImageButton
+                    Style="{StaticResource buttonStyle}"
+                    BackgroundColor="#FFCB14"
+                    AbsoluteLayout.LayoutBounds="35, 620"/>
+                <ImageButton
+                    Source="smoking_no_icon"
+                    WidthRequest="35"
+                    HeightRequest="35"
+                    BackgroundColor="#FFCB14"
+                    AbsoluteLayout.LayoutBounds="70, 652"/>
+                <Label Text="Здоровые привычки"  
+                   Style="{StaticResource labelStyle}"
+                   AbsoluteLayout.LayoutBounds="130, 655"/>
+
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

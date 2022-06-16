@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.SettingPage"
+             Background="#E5E5E5">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="#4F4A4A" />
+                <Setter Property="BackgroundColor" Value="#E5E5E5" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+
+                <Image Source="head_icon" 
+                   WidthRequest="410" 
+                   HeightRequest="230"
+                   AbsoluteLayout.LayoutBounds="0, 0"/>
+                <Image Source="Rectangle_head.png" 
+                   WidthRequest="420" 
+                   HeightRequest="300"
+                   AbsoluteLayout.LayoutBounds="0, 110"/>
+                <Image Source="group_icon" 
+                   WidthRequest="60" 
+                   HeightRequest="60"
+                   AbsoluteLayout.LayoutBounds="30, 205"/>
+                <Label Text="Посмотреть свой профиль >"  
+                    FontSize="12" 
+                    TextColor="#959595" 
+                    FontFamily="Roboto" 
+                    FontAttributes="Bold" 
+                    AbsoluteLayout.LayoutBounds="20, 290"/>
+
+
+                <Button
+                    Text="Цели"
+                    Style="{StaticResource buttonStyle}"
+                    WidthRequest="90"
+                    HeightRequest="50"
+                    Clicked="ImageButton_Target"
+                    AbsoluteLayout.LayoutBounds="95, 370"/>
+
+                <Image Source="target_icon" 
+                   WidthRequest="35" 
+                   HeightRequest="35"
+                   AbsoluteLayout.LayoutBounds="30, 370"/>
+
+                <Button
+                    Text="Масса тела"
+                    Style="{StaticResource buttonStyle}"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    AbsoluteLayout.LayoutBounds="80, 440"/>
+
+
+                <Image Source="tape_icon" 
+                   WidthRequest="45" 
+                   HeightRequest="45"
+                   AbsoluteLayout.LayoutBounds="30, 440"/>
+                <Button
+                    Text="Полезные советы"
+                    Style="{StaticResource buttonStyle}"
+                    WidthRequest="230"
+                    HeightRequest="50"
+                    Clicked="ImageButton_Tips"
+                    AbsoluteLayout.LayoutBounds="89, 512"/>
+                <Image Source="book_icon" 
+                   WidthRequest="30" 
+                   HeightRequest="30"
+                   AbsoluteLayout.LayoutBounds="38, 522"/>
+
+                <Button
+                    Text="Настройки"
+                    Style="{StaticResource buttonStyle}"
+                    WidthRequest="160"
+                    HeightRequest="50"
+                    AbsoluteLayout.LayoutBounds="86, 585"/>
+                <Image Source="setting" 
+                   WidthRequest="35" 
+                   HeightRequest="35"
+                   AbsoluteLayout.LayoutBounds="38, 593"/>
+
+                <Button
+                    Text="О приложении"
+                    Style="{StaticResource buttonStyle}"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    Clicked="ImageButton_AboutApplication"
+                    AbsoluteLayout.LayoutBounds="84, 660"/>
+                <Image Source="information_icon" 
+                   WidthRequest="35" 
+                   HeightRequest="35"
+                   AbsoluteLayout.LayoutBounds="40, 668"/>
+
+                <Rectangle Fill="White"
+                    WidthRequest="650"
+                    HeightRequest="70"
+                    AbsoluteLayout.LayoutBounds="0, 800"/>
+                <ImageButton
+                    Source="camera.png"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    BackgroundColor="White" 
+                    Clicked="ImageButton_Clicked"
+                    AbsoluteLayout.LayoutBounds="180, 808"/>
+                <ImageButton
+                    Source="setting_orange.png"
+                    WidthRequest="35"
+                    HeightRequest="35"
+                    BackgroundColor="White"
+                    AbsoluteLayout.LayoutBounds="320, 808"/>
+                <Label Text="Подробнее"  
+                    FontSize="14" 
+                    TextColor="#FA6E09" 
+                    FontFamily="Roboto" 
+                    FontAttributes="Bold" 
+                    AbsoluteLayout.LayoutBounds="300, 840"/>
+                <ImageButton
+                    Source="fire.png"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Clicked="ImageButton_Clicked_1"
+                    BackgroundColor="White"
+                    AbsoluteLayout.LayoutBounds="40, 805"/>
+                <Label Text="Калории"  
+                    FontSize="14" 
+                    TextColor="#959595" 
+                    FontFamily="Roboto" 
+                    FontAttributes="Bold" 
+                    AbsoluteLayout.LayoutBounds="30, 840"/>
+
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

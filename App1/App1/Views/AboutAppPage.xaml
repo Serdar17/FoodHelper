@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.AboutAppPage"
+             Background="#E5E5E5">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="labelStyle1" TargetType="Label">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="CharacterSpacing" Value="2"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+                <Label Text="О приложении"
+               TextColor="#000000"
+                Style="{StaticResource labelStyle}"
+                AbsoluteLayout.LayoutBounds="125,20"/>
+
+                <Rectangle Fill="#fb9750"
+                    WidthRequest="350"
+                    HeightRequest="180"
+                    RadiusX="20"
+                    RadiusY="20"
+                    AbsoluteLayout.LayoutBounds="35,100">
+                </Rectangle>
+
+                <Label
+                Text=" Хотите следить за своим &#10; рационом питания и без &#10; лишних усилий узнавать, &#10; какую калорийность &#10; имеет каждый прием пищи?"
+                Style="{StaticResource labelStyle1}"
+                AbsoluteLayout.LayoutBounds="50,120"/>
+
+                <Rectangle Fill="#fb9750"
+                    WidthRequest="350"
+                    HeightRequest="360"
+                    RadiusX="20"
+                    RadiusY="20"
+                    AbsoluteLayout.LayoutBounds="35,330">
+                </Rectangle>
+
+                <Label x:Name="Label1"
+                Style="{StaticResource labelStyle1}"
+                AbsoluteLayout.LayoutBounds="50,355"/>
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

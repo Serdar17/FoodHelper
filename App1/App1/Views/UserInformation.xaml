@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.UserInformation"
+             Background="White">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="InformationLayout">
+
+            <Label Text="Сведение о" 
+                   FontSize="24" 
+                   TextColor="#282828" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="120, 35"/>
+
+            <Label Text="профиле" 
+                   FontSize="24" 
+                   TextColor="#282828" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="138, 70"/>
+
+            <Entry x:Name="DataLogin" 
+                   AbsoluteLayout.LayoutBounds="90, 156, 270, 60" 
+                   Placeholder="Дата Рождения"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="DimGray"
+                   Focused ="DataLogin_Focused"
+                   Unfocused ="DataLogin_Unfocused">
+            </Entry>
+
+            <Image x:Name="DataImage"
+                   Source="data.png" 
+                   WidthRequest="23" 
+                   HeightRequest="23"
+                   AbsoluteLayout.LayoutBounds="54, 174"/>
+
+            <Rectangle x:Name="DataRectangle"  
+                    Stroke="DimGray"
+                    StrokeThickness="2"          
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 160" />
+
+            <Entry x:Name="Ruler" 
+                   AbsoluteLayout.LayoutBounds="90, 241, 270, 60" 
+                   Keyboard="Email"
+                   Placeholder="Рост                                            см"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="Gray"
+                   Focused ="Ruler_Focused"
+                   Unfocused ="Ruler_Unfocused">
+
+            </Entry>
+
+            <Image Source="ruler.png"     
+                   WidthRequest="22" 
+                   HeightRequest="22"
+                   AbsoluteLayout.LayoutBounds="54, 260"/>
+
+            <Rectangle x:Name="RulerRectangle"  
+                    Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 245"
+                    />
+
+            <Entry x:Name="Weight" 
+                   AbsoluteLayout.LayoutBounds="90, 326, 270, 60" 
+                   Keyboard="Email"
+                   Placeholder="Вес                                              кг"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="Gray"
+                   Focused="Weight_Focused"
+                   Unfocused="Weight_Unfocused">
+            </Entry>
+
+            <Image Source="weight.png"     
+                   WidthRequest="23" 
+                   HeightRequest="23"
+                   AbsoluteLayout.LayoutBounds="54, 345"/>
+
+            <Rectangle x:Name="WeightRectangle"  
+                    Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 330" 
+                      />
+
+
+            <Image Source="fontisto_male.png"     
+                   WidthRequest="22" 
+                   HeightRequest="22"
+                   AbsoluteLayout.LayoutBounds="54, 429"/>
+
+            <Image Source="female.png"     
+                   WidthRequest="22" 
+                   HeightRequest="22"
+                   AbsoluteLayout.LayoutBounds="285, 429"/>
+
+            <Rectangle x:Name="ConfirmPasswordRectangle"  
+                    Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 415" />
+
+            <Ellipse Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="20"
+                    HeightRequest="20"
+                    AbsoluteLayout.LayoutBounds="95, 430"/>
+
+            <Ellipse Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="20"
+                    HeightRequest="20"
+                    AbsoluteLayout.LayoutBounds="326, 430"/>
+
+            <RadioButton
+                AbsoluteLayout.LayoutBounds="320, 424" 
+                IsChecked="False"/>
+            <RadioButton  
+                AbsoluteLayout.LayoutBounds="89, 424" 
+                IsChecked="False"/>
+
+
+            <!--<Image Source="pointer.png"     
+                   WidthRequest="25" 
+                   HeightRequest="16"
+                   AbsoluteLayout.LayoutBounds="320, 540"
+                   Focused="Image_Focused"
+                   Unfocused="Image_Unfocused"/>-->
+
+            <ImageButton
+                Source="pointer.png"
+                WidthRequest="25"
+                HeightRequest="16"
+                BackgroundColor="White"
+                Clicked="ImageButton_Clicked"
+                AbsoluteLayout.LayoutBounds="320, 540"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.TargetPage"
+             Background="#E5E5E5">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#959595" />
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="Roboto" />
+            </Style>
+            <Style x:Key="labelStyle_1" TargetType="Label">
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="Roboto" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+                <Label Text="&quot;Когда вам покажется, что цель недостижима, не изменяйте"  
+                    Style="{StaticResource labelStyle}"                    
+                    AbsoluteLayout.LayoutBounds="20, 20"/>
+                <Label Text="цель - изменяйте свой план действий.&quot;"  
+                    Style="{StaticResource labelStyle}"                    
+                    AbsoluteLayout.LayoutBounds="90, 40"/>
+                <Label Text="Конфуций"  
+                    Style="{StaticResource labelStyle}"                    
+                    AbsoluteLayout.LayoutBounds="330, 60"/>
+
+                <Rectangle Fill="#bfbfbf"
+                    WidthRequest="650"
+                    HeightRequest="110"
+                    AbsoluteLayout.LayoutBounds="0, 150"/>
+                <Image Source="watch_icon" 
+                   WidthRequest="50" 
+                   HeightRequest="50"
+                   AbsoluteLayout.LayoutBounds="175, 120"/>
+                <Label Text="Правильный сон"  
+                   Style="{StaticResource labelStyle_1}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="130, 170"/>
+                <Label Text="Убедитесь, что вы достаточно спите. Сон - лучший"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="30, 200"/>
+                <Label Text="способ держать свой ум в форме"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="90, 220"/>
+
+                <Rectangle Fill="#bfbfbf"
+                    WidthRequest="650"
+                    HeightRequest="110"
+                    AbsoluteLayout.LayoutBounds="0, 320"/>
+                <Image Source="walk_icon" 
+                   WidthRequest="50" 
+                   HeightRequest="50"
+                   AbsoluteLayout.LayoutBounds="175, 290"/>
+                <Label Text="Больше движения"  
+                   Style="{StaticResource labelStyle_1}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="120, 340"/>
+                <Label Text="Ходьба — одна из самых простых и эффективных"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="30, 370"/>
+                <Label Text="форм упражнений, которые вы можете делать"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="40, 390"/>
+
+                <Rectangle Fill="#bfbfbf"
+                    WidthRequest="650"
+                    HeightRequest="110"
+                    AbsoluteLayout.LayoutBounds="0, 490"/>
+                <Image Source="scales_icon" 
+                   WidthRequest="50" 
+                   HeightRequest="50"
+                   AbsoluteLayout.LayoutBounds="175, 465"/>
+                <Label Text="Масса"  
+                   Style="{StaticResource labelStyle_1}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="170, 515"/>
+                <Label Text="Никогда не упускайте из виду вес, который вы "  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="40, 545"/>
+                <Label Text="намеревались достичь"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="120, 565"/>
+
+                <Rectangle Fill="#bfbfbf"
+                    WidthRequest="650"
+                    HeightRequest="110"
+                    AbsoluteLayout.LayoutBounds="0, 660"/>
+                <Image Source="water_icon" 
+                   WidthRequest="50" 
+                   HeightRequest="50"
+                   AbsoluteLayout.LayoutBounds="175, 635"/>
+                <Label Text="Достаточное потребление воды"  
+                   Style="{StaticResource labelStyle_1}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="65, 685"/>
+                <Label Text="Поставьте перед с собой цель, чтобы избежать"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="45, 715"/>
+                <Label Text="обезвоживания"  
+                   Style="{StaticResource labelStyle_1}"
+                   AbsoluteLayout.LayoutBounds="150, 735"/>
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

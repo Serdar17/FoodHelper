@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.QuestionPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <Label Text="Ваш целевой вес?" 
+                   FontSize="24" 
+                   TextColor="#282828" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="90, 35"/>
+
+            <Rectangle x:Name="RulerRectangle"  
+                    Stroke="#FA6E09"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="350"
+                    RadiusX="20"
+                    RadiusY="20"
+                    AbsoluteLayout.LayoutBounds="30, 105"
+                    />
+            <Line X1="340"
+                Y1="190"
+                X2="70"
+                Y2="190"
+                Stroke="Gray" />
+
+            <Label Text="Целевой веc:" 
+                   FontSize="16" 
+                   TextColor="#000000" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="80, 155"/>
+
+            <Entry AbsoluteLayout.LayoutBounds="195, 149, 70, 40" 
+                   Placeholder="вес"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="DimGray">
+            </Entry>
+
+            <Label Text="кг" 
+                   FontSize="16" 
+                   TextColor="#000000" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="240, 155"/>
+
+            <Label Text="Как вы хотите достигнуть своей" 
+                   FontSize="16" 
+                   TextColor="#000000" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="69, 225"/>
+
+            <Label Text="цели?" 
+                   FontSize="16" 
+                   TextColor="#000000" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="180, 250"/>
+            <Slider 
+                Minimum="0"
+                Maximum="100"
+                Value="30"
+                ThumbColor="#FA6E09"
+                MinimumTrackColor="#FA6E09"
+                MaximumTrackColor="Gray" 
+                AbsoluteLayout.LayoutBounds="60, 310, 300, 14"/>
+
+            <Label Text="Медленно" 
+                   FontSize="16" 
+                   TextColor="#000000" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="50, 350"/>
+
+            <Label Text="Быстро" 
+                   FontSize="16" 
+                   TextColor="#000000" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="290, 350"/>
+
+            <ImageButton
+                Source="pointer.png"
+                WidthRequest="25"
+                HeightRequest="16"
+                BackgroundColor="White"
+                Clicked="ImageButton_Clicked"
+                AbsoluteLayout.LayoutBounds="320, 540"/>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

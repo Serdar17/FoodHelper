@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegisterPage"
+             Background="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout x:Name="RegisterLayout">
+
+                <Label Text="Регистрация" 
+                   FontSize="24" 
+                   TextColor="#282828" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="120, 35"/>
+
+                <Label Text="Заполните все поля, чтобы создать аккаунт"  
+                   FontSize="14" 
+                   TextColor="#959595" 
+                   FontFamily="Roboto" 
+                   FontAttributes="Bold" 
+                   AbsoluteLayout.LayoutBounds="45, 85"/>
+
+                <Entry x:Name="UserLogin" 
+                   AbsoluteLayout.LayoutBounds="90, 156, 270, 60" 
+                   Placeholder="Marina Volkova"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="DimGray"
+                   Focused="UserLogin_Focused"
+                   Unfocused="UserLogin_Unfocused">
+                </Entry>
+
+                <Image x:Name="UserImage"
+                   Source="user.png" 
+                   WidthRequest="25" 
+                   HeightRequest="25"
+                   AbsoluteLayout.LayoutBounds="54, 174"/>
+                <Rectangle x:Name="UserRectangle"  
+                    Stroke="DimGray"
+                    StrokeThickness="2"          
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 160" />
+
+                <Entry x:Name="Email" 
+                   AbsoluteLayout.LayoutBounds="90, 241, 270, 60" 
+                   Keyboard="Email"
+                   Placeholder="Email"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="Gray"
+                   Focused="Email_Focused"
+                   Unfocused="Email_Unfocused"
+                   >
+                </Entry>
+
+                <Image Source="mail.png"     
+                   WidthRequest="22" 
+                   HeightRequest="22"
+                   AbsoluteLayout.LayoutBounds="54, 260"/>
+
+                <Rectangle x:Name="EmailRectangle"  
+                    Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 245"
+                    />
+
+                <Entry x:Name="Password" 
+                   AbsoluteLayout.LayoutBounds="90, 326, 270, 60" 
+                   Keyboard="Email"
+                   Placeholder="Password"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="Gray"
+                   Focused="Password_Focused"
+                   Unfocused="Password_Unfocused">
+                </Entry>
+
+                <Image Source="lock.png"     
+                   WidthRequest="22" 
+                   HeightRequest="22"
+                   AbsoluteLayout.LayoutBounds="54, 345"/>
+
+                <Rectangle x:Name="PasswordRectangle"  
+                    Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 330" 
+                      />
+
+                <Entry x:Name="ConfirmPassword" 
+                   AbsoluteLayout.LayoutBounds="90, 411, 270, 60" 
+                   Keyboard="Email"
+                   Placeholder="Confirm Password"
+                   FontSize="Small"
+                   TextColor="DimGray" 
+                   PlaceholderColor="Gray"
+                   Focused="ConfirmPassword_Focused"
+                   Unfocused="ConfirmPassword_Unfocused">
+                </Entry>
+
+                <Image Source="lock.png"     
+                   WidthRequest="22" 
+                   HeightRequest="22"
+                   AbsoluteLayout.LayoutBounds="54, 429"/>
+
+                <Rectangle x:Name="ConfirmPasswordRectangle"  
+                    Stroke="Gray"
+                    StrokeThickness="2"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    RadiusX="50"
+                    RadiusY="50"
+                    AbsoluteLayout.LayoutBounds="35, 415" />
+
+                <Button
+                VerticalOptions="Center"
+                Text="Создать"
+                TextColor="White"
+                BackgroundColor="#FA6E09"
+                BorderWidth = "1.5"
+                CornerRadius="50"
+                FontSize="14"
+                AbsoluteLayout.LayoutBounds="110, 510, 180, 50"
+                Clicked="Button_Clicked">
+                </Button>
+
+                <Label AbsoluteLayout.LayoutBounds="100, 595">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Уже есть аккаунт?" FontSize="14" TextColor="#959595"/>
+                            <Span Text="   Войдите" FontSize="14" TextColor="#FA6E09"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!--<BoxView Color="#FA6E09" CornerRadius="50,50,50,50" AbsoluteLayout.LayoutBounds="70, 270, 250, 70" />
+            <Label Text="Заголовок" TextColor="Black" FontSize="Large" AbsoluteLayout.LayoutBounds="110, 90, 150, 60" />
+            <Label Text="Основное содержание текста" TextColor="Black" FontSize="Medium" AbsoluteLayout.LayoutBounds="70, 150, AutoSize, AutoSize" />-->
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
